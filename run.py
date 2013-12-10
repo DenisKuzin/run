@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from sys import argv
-from sh import miredo
+import sh
 
 def main():
     if len(argv) != 2:
@@ -9,7 +9,9 @@ def main():
         return
     command = argv[1]
     if command == 'miredo':
-        miredo()
+        sh.miredo()
+    elif command == 'revert':
+        sh.hg.revert("-C", "--all")
     else:
         print 'What is "%s"?' % command
 
