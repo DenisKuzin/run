@@ -1,0 +1,1 @@
+trbd_home = '/home/deniskuzin/trbd'
